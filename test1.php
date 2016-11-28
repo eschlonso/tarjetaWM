@@ -8,6 +8,8 @@
 <script>
   
 function selector1(){
+
+
         var items="";
       $.getJSON("consultaSucursal.php?prov=0",function(data){
         $.each(data,function(index,item) 
@@ -16,9 +18,16 @@ function selector1(){
         });
         $("#a1_title").html(items); 
       });
+
 }
 
 function selector2(){
+
+//alert('tocaste aqui');
+$('#a2_title').hide();
+$('#a3_title').hide();
+
+
   NONO=$("#a1_title").val();
  // alert(NONO);
         var items="";
@@ -29,6 +38,7 @@ function selector2(){
         });
         $("#a2_title").html(items); 
       });
+
 }
 
 
@@ -46,6 +56,8 @@ function selector3(){
         });
         $("#a3_title").html(items); 
       });
+
+ 
 }
 
 
@@ -85,13 +97,17 @@ direccion es sucursal.<br>
 
 <script>
   
-
+$('#a2_title').hide();
+$('#a3_title').hide();
 
   $('#a1_title').on('change', function(){
 
   
 
 selector2();
+
+
+ $("#a2_title").show();
 
 
 
@@ -104,6 +120,7 @@ selector2();
   
 
 selector3();
+ $("#a3_title").show();
 
 
 
