@@ -1,0 +1,393 @@
+body {
+    background-color: #0066ae;
+}
+
+#header {
+  margin-bottom: 0;
+}
+h1{
+margin: 40px 0;	
+	}
+
+.banner{
+	text-align:center;
+	}
+#exito{
+		text-align:center;
+		background:#eee;
+		padding:30px;
+	}	
+#exito p{
+		font-size:24px;
+		line-height:28px;
+		color:#da520d;
+		
+	
+	}	
+#exito a{
+	color:#fff;
+	background:#f39300;
+	display:inline-block;
+	padding:5px;
+	width:50%;
+	-webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   margin-top:50px;
+   margin-top:20px;
+  text-decoration:none;
+	
+	
+	}		
+a,
+a:hover,
+a:visited,
+a:active {
+	color: #0074bc;
+}
+
+.col-left {
+	padding-right: 2px;
+}
+
+.col-right {
+	padding-left: 3px;
+}
+
+.parsley-errors-list {
+    margin: 0;
+    padding: 5px 0 0 0;
+}
+
+.parsley-errors-list li {
+    list-style-type: none;
+    color: #da520d;
+}
+
+.parsley-error {
+    border-color: #D32F2F;
+}
+
+#logo-carta {
+    margin: 30px 0 30px 0;
+}
+
+#pesos-ya-logo {
+	background-image: url(../img/pesos_ya_391x64.png);
+	display: inline-block;
+	width: 391px;
+	height: 64px;
+	margin-top: 20px;
+}
+
+#wallmart-logo {
+	background-image: url(../img/pesos_ya_391x64.jpg);
+	display: inline-block;
+	width: 500px;
+	height: 80px;
+	margin-top: 20px;
+}
+
+.sf{
+	padding:20px 30px ;
+	}
+
+#footer-container {
+	
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #999;
+	font-size: 12px;
+}
+
+#footer-container #col-left {
+    padding-top: 20px;
+}
+
+#footer-container #col-middle {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#footer-container #col-right {
+	text-align: right;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+	#footer-container #col-middle {
+		text-align: left;
+	}
+    #footer-container #col-right {
+        text-align: left;
+    }
+}
+
+/***********************************************************************/
+
+#form-container {
+    background-color: #ececec;
+    min-height: 400px;
+    padding: 30px 40px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-bottom: 20px;
+}
+.mrg{
+margin:0px;
+padding:0px;	
+	
+}
+
+h1{
+color: #f4af2c;	
+font-size:24px;
+line-height:28px;
+	}
+
+#h1-container {
+    background-color: #ececec;
+    color: #4d6a7e;
+    padding: 30px 40px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#h1-container h1 {
+    margin: 0;
+    padding: 0 0 30px 0;
+    font-size: 28px;
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 2px dotted #CCC;
+	
+}
+
+#form-container h2 {
+    border-bottom: 1px solid #CCC;
+    color: #f39300;
+    font-size: 20px;
+    margin: 10px 0 15px 0;
+    padding-bottom: 10px;
+}
+
+#form-container .col-label {
+    text-align: left;
+    padding-top: 2px;
+    color: #0074bc;
+}
+
+#form-container .col-label label {
+    font-weight: normal;
+    color: #000;
+}
+
+#form-container .col-label #monto {
+    font-weight: bold;
+    color: #666;
+    font-size: 16px;
+}
+
+/*#form-container .form-group {
+    margin-bottom: 20px;
+}
+*/
+#form-container .btn {
+    background-color: #f39300;
+	margin-top:10px;
+}
+
+#form-container .terms {
+    font-size: 12px;
+}
+
+#legal {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#legal p {
+    font-size: 13px;
+    color: #fff;
+}
+
+#legal p.parsley-error {
+	margin-bottom: 2px;
+}
+#legal .parsley-errors-list {
+	margin: 0 0 10px 0;
+	font-size: 11px;
+}
+
+#legal span {
+	font-size: 14px;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	#h1-container h1 {
+        font-size: 22px;
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+	h1{
+		font-size:18px;
+		line-height:24px;
+		
+		}
+    #h1-container {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 20px 20px 0 20px;
+        border: none;
+    }
+    #h1-container h1 {
+        font-size: 24px;
+        padding: 0 0 20px 0;
+    }
+    #form-container {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 20px;
+        border: none;
+    }
+    #form-container .btn {
+        margin-top: 20px;
+    }
+    #legal {
+        margin-top: 20px;
+    }
+    #pesos-ya-logo {
+		width: 100px;
+		background-position: right center;
+		margin-top: 16px;
+	}
+}
+/***********************************************************************/
+
+/* PHASES */
+
+#phases {
+	margin: 10px 0 30px 0;
+}
+
+/***********************************************************************/
+
+/* txts */
+
+#txts {
+    margin: 0 0 20px 20px;
+    color: #fff;
+}
+
+#txts h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #f4af2c;
+    font-weight: bold;
+	margin-bottom:15px;
+}
+
+#txts h3 {
+    font-size: 15px;
+    margin: 30px 0 15px 0;
+    color: #f4af2c;
+    font-weight: bold;
+}
+
+#txts h4 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+#txts p,
+#txts ul {
+    font-size: 14px;
+	line-height:24px;
+	margin-bottom:20px;	
+}
+.cierre{
+	list-style:none;
+	margin-left:-15px;
+	
+	}
+#txts ul {
+
+}
+#txts ul span {
+	margin-left:-15px;
+	
+}
+
+/***********************************************************************/
+
+/* CONFIRMATION */
+
+#confirmation-wrapper {
+	background-color: #ececec;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	text-align: center;
+}
+
+#confirmation-wrapper h1 {
+	font-weight: bold;
+    color: #0074bc;
+}
+
+#confirmation-wrapper p {
+	font-size: 18px;
+}
+
+@media (max-width: 767px) {
+	h1{
+		margin:0 5% 20px;
+		}
+	#form-container {
+    background-color: #ececec;
+    min-height: 400px;
+    padding: 30px 40px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin:0 auto 20px;
+	width:90%;
+}
+.mrg{
+margin:0px;
+padding:0px;	
+	
+}
+
+	#confirmation-wrapper {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	#confirmation-wrapper h1 {
+		font-size: 24px;
+	}
+}
+
+/***********************************************************************/
+
+/* PAGE */
+
+#page-wrapper {
+	margin-bottom: 30px;
+}
+
+#page-wrapper h1 {
+	font-weight: bold;
+    color: #0074bc;
+    font-size: 24px;
+	margin: 10px 0 20px 0;
+}
+
+#page-wrapper h2 {
+	font-weight: bold;
+    color: #0074bc;
+    font-size: 18px;
+}

@@ -4,24 +4,16 @@
 
 	
 	
+	
+	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
 <!-- 
-    <script type="text/javascript" src="./archivos/6bc1c39adc"></script>
 
-
-    <script src="./archivos/nr-995.min.js"></script>
-
-
-    <script async="" src="./archivos/fbevents.js"></script>
-
-    <script type="text/javascript" async="" src="./archivos/conversion_async.js"></script>
-
-    <script type="text/javascript" async="" src="./archivos/analytics.js"></script>
-
-    <script async="" src="./archivos/gtm.js"></script>
-
-    <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!d){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[y[n]];return f&&f.push([b,n,r,i]),i}}function p(e,t){w[e]=v(e).concat(t)}function v(e){return w[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var w={},y={},b={on:p,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a};return b}function i(){return new r}function a(){d=!0,s=p.backlog={}}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o(),d=!1;p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=b.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(w,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-995.min.js"},y=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a(),origin:m,features:{},xhrWrappable:y};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <script type="text/javascript" src="./archivos/6bc1c39adc"></script><script src="./archivos/nr-995.min.js"></script><script async="" src="./archivos/fbevents.js"></script><script type="text/javascript" async="" src="./archivos/conversion_async.js"></script><script type="text/javascript" async="" src="./archivos/analytics.js"></script><script async="" src="./archivos/gtm.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!d){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[y[n]];return f&&f.push([b,n,r,i]),i}}function p(e,t){w[e]=v(e).concat(t)}function v(e){return w[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var w={},y={},b={on:p,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a};return b}function i(){return new r}function a(){d=!0,s=p.backlog={}}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o(),d=!1;p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=b.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(w,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-995.min.js"},y=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a(),origin:m,features:{},xhrWrappable:y};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
 -->
+
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -46,6 +38,8 @@
 
 <link rel="icon" type="image/png" href="archivos/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="archivos/favicon-16x16.png" sizes="16x16" />
+
+
 
 
 
@@ -248,6 +242,8 @@ var google_remarketing_only = false;
 
 
 
+
+
 </head>
 
 <body>
@@ -261,23 +257,20 @@ var google_remarketing_only = false;
             <div class="col-xs-12 banner"><img src="archivos/banner.svg" alt="15% de ahorro en primera compra. Tope de reintegro $150. Tarjeta Wallmart. Comprás bien"/></div><!--/.col --></div><!--/.row -->
 
       <div class="row">
-      <div id="exito"></div>
-       <div id="titulo1">Completá tus datos y adquirí tu tarjeta.</div>
+       <h1>Completá tus datos y empezá a comprar bien</h1>
+            <div class="col-md-7 mrg">
 
-
-
-<div class="col-md-7 mrg">
-
-                <div id="exito1"> 
+                <div id="exito"> 
                     
-<h1>
+<p>
 
 
-Sus datos fueron enviados correctamente.
- <a href="" name="result">Volver</a>
+Sus datos fueron enviados correctamente,<br>
+ nos comunicaremos con ustedes a la brevedad.<br>
+ <a href="" name="result">Volver</a> 
 
 
-</h1>
+</p>
                 </div>
                <!-- <div id="h1-container">
                     <h1>Completá tus datos</h1>
@@ -292,9 +285,9 @@ Sus datos fueron enviados correctamente.
                         <div class="col-xs-3 col-sm-2 col-left">
                             <select name="documentType" id="documentType" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
                                 <option value="" label="Tipo..." selected="true" disabled="true">Tipo...</option>
-                                <option value="DNI" label="DNI">DNI</option>
-                                <option value="L.E." label="L.E.">L.E.</option>
-                                <option value="L.C." label="L.C.">L.C.</option>
+                                <option value="1" label="DNI">DNI</option>
+                                <option value="2" label="L.E.">L.E.</option>
+                                <option value="3" label="L.C.">L.C.</option>
                             </select>
                         </div><!--/.col -->
                         <div class="col-xs-9 col-sm-6 col-right">
@@ -480,14 +473,14 @@ Sus datos fueron enviados correctamente.
                         <div class="col-sm-8">
                             <select name="condlaboral" id="condlaboral" class="form-control" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="20">
                                 <option value="" label="Seleccionar..." selected="true" disabled="true">Seleccionar...</option>
-                                <option value="Empleado publico" label="Empleado público">Empleado público</option>
-                                <option value="Fuerzas Armadas / Fuerzas de Seguridad" label="Fuerzas Armadas / Fuerzas de Seguridad">Fuerzas Armadas / Fuerzas de Seguridad</option>
-                                <option value="Empleado privado" label="Empleado privado">Empleado privado</option>
-                                <option value="Jubilado" label="Jubilado">Jubilado</option>
-                                <option value="Autonomo" label="Autónomo">Autónomo</option>
-                                <option value="Monotributo" label="Monotributo">Monotributo</option>
-                                <option value="Desocupado" label="Desocupado">Desocupado</option>
-                                <option value="Otros" label="Otros">Otros</option>
+                                <option value="10" label="Empleado público">Empleado público</option>
+                                <option value="12" label="Fuerzas Armadas / Fuerzas de Seguridad">Fuerzas Armadas / Fuerzas de Seguridad</option>
+                                <option value="11" label="Empleado privado">Empleado privado</option>
+                                <option value="5" label="Jubilado">Jubilado</option>
+                                <option value="8" label="Autónomo">Autónomo</option>
+                                <option value="9" label="Monotributo">Monotributo</option>
+                                <option value="0" label="Desocupado">Desocupado</option>
+                                <option value="2" label="Otros">Otros</option>
                             </select>
                         </div><!--/.col -->
                     </div><!--/.form-group -->
@@ -531,9 +524,9 @@ Sus datos fueron enviados correctamente.
                         <div class="col-sm-8">
                             <select name="perfilcrediticio" id="perfilcrediticio" class="form-control" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="26">
                                 <option value="" label="Seleccionar..." disabled="true" selected="true">Seleccionar...</option>
-                                <option value="No tengo préstamos ni tarjetas de crédito" label="No tengo préstamos ni tarjetas de crédito">No tengo préstamos ni tarjetas de crédito</option>
-                                <option value="Tengo préstamo y/o tarjeta y estoy al día" label="Tengo préstamo y/o tarjeta y estoy al día">Tengo préstamo y/o tarjeta y estoy al día</option>
-                                <option value="Tengo préstamo y/o tarjeta con atraso mayor a 60 días" label="Tengo préstamo y/o tarjeta con atraso mayor a 60 días">Tengo préstamo y/o tarjeta con atraso mayor a 60 días</option>
+                                <option value="0" label="No tengo préstamos ni tarjetas de crédito">No tengo préstamos ni tarjetas de crédito</option>
+                                <option value="1" label="Tengo préstamo y/o tarjeta y estoy al día">Tengo préstamo y/o tarjeta y estoy al día</option>
+                                <option value="2" label="Tengo préstamo y/o tarjeta con atraso mayor a 60 días">Tengo préstamo y/o tarjeta con atraso mayor a 60 días</option>
                             </select>
                         </div><!--/.col -->
                     </div><!--/.form-group -->
@@ -583,34 +576,32 @@ Sus datos fueron enviados correctamente.
                             <div id="phoneError"></div>
                         </div>
                     </div><!--/.form-group -->
-<br>
----------------------
-<br>
 
 
 
-<br>
+
+
 <div id="p1">
 Provincia<br>
 <select id="a1_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
   <option>Default</option>
 </select>
 </div>
-<br>
+
 <div id="p2">
-Localidad<br>
+<br>Localidad<br>
 <select id="a2_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
   <option>Default</option>
 </select>
 </div>
-<br>
+
 <div id="p3">
-Sucursal<br>
+<br>Sucursal<br>
 <select id="a3_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
   <option>Default</option>
 </select></div>
 
-<br>
+
 
 
 
@@ -660,13 +651,12 @@ selector3();
 
 </script>
 
-
----------------------
-
-
-
 <br>
 
+
+
+
+<!--
                     <div class="form-group">
                         <div class="col-sm-4 col-label">
                             <label for="prov">Provincia</label>
@@ -698,8 +688,9 @@ selector3();
                                 <option value="V" label="Tierra del Fuego">Tierra del Fuego</option>
                                 <option value="T" label="Tucumán">Tucumán</option>
                             </select>
-                        </div><!--/.col -->
-                    </div><!--/.form-group -->
+                        </div>
+                    </div>
+                    -->
 
 
 
@@ -718,29 +709,19 @@ selector3();
                             <div class="checkbox terms">
                                 <label for="acceptterms">
                                     <input type="checkbox" name="acceptterms" id="acceptterms" value="1" data-parsley-required="true" data-parsley-required-message="Es necesario que aceptes los Términos &amp; Condiciones." data-parsley-multiple="acceptterms" data-parsley-id="43" checked="checked">
-                                    Leí y acepto los <a target="_blank" href="http://www.pesosya.com.ar/terminos-y-condiciones.php">Términos &amp; Condiciones</a> y la <a href="http://www.pesosya.com.ar/politica-de-privacidad.php" target="_blank">Política de Privacidad</a>.
+                                    Leí y acepto los <a target="_blank" href="terminosCondiciones.html">Términos &amp; Condiciones</a> y la <a href="PoliticasPrivacidad.html" target="_blank">Política de Privacidad</a>.
                                 </label>
                             </div><!--/.checkbox -->
                             <div class="checkbox terms">
                                 <label for="acceptterms">
-                                    <input type="checkbox" name="newsletter" id="newsletter" data-parsley-multiple="newsletter" data-parsley-id="46" checked>
+                                    <input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked" data-parsley-multiple="newsletter" data-parsley-id="46">
                                     Acepto recibir promociones y ofertas relacionadas.
                                 </label>
                             </div><!--/.checkbox -->
                         </div><!--/.col -->
                         <div class="col-sm-8 col-sm-offset-2">
-
-                        <!--
                             <button type="submit" name="SolicitarPrestamo" id="SolicitarPrestamo" class="btn btn-warning btn-lg btn-block" data-loading-text="&lt;i class=&#39;fa fa-spinner fa-spin&#39;&gt;&lt;/i&gt; Enviando...">
--->
-
-<button type="submit" name="SolicitarPrestamo" id="SolicitarPrestamo" class="btn btn-warning btn-lg btn-block" data-loading-text="Enviando...">
-
-<!-- <i class='fa fa-spinner fa-spin'></i> -->
-
-
-
-                                CONSULTAR
+                                ME INTERESA
                             </button>
                         </div><!--/.col -->
                     </div><!--/.form-group -->
@@ -748,46 +729,34 @@ selector3();
                 </div><!--/#form-container -->
 
             </div><!--/.col -->
-
-
-
-
             <div class="col-md-5">
 
                 
 
               <div id="txts" class="clearfix">
 
-                    <h2>BENEFICIOS</h2>
+                    <h2>Con Tarjeta MasterCard Walmart tenés promociones, descuentos y cuotas sin interés</h2>
                 <ul>
-                        <li>Es MasterCard® internacional, usala donde quieras.</li>
-                        <li>Pedí tu tarjeta y hasta 4 adicionales sin cargo.</li>
-                        <li>La pedís y comprás en el momento.</li>
+                 
+                        <li>Es MasterCard internacional, usala donde quieras.</li>
+                        <li>Todos los días 4 cuotas sin interés en Walmart y Changomas.</li>
+                        <li>Todos los jueves 15% de ahorro en Walmart y Changomas.</li>
+                        <li>Todos los días 20% de ahorro en walmartonline.com.ar.</li>
+                        <li>Sábados y domingos 25% de descuento en Mc Donald`s y 2x1 en cines.</li>
+                        <li>Podés pedir hasta 4 adicionales sin cargo.</li>
                         <li>Podés elegir la fecha de vencimiento.</li>
-                        <li>Podés pagar tu resumen en línea de cajas de Walmart y Changomás, Red Pago Fácil, Pagomiscuentas.com y BAPRO.</li>
-                        <li>Podés sacar efectivo en cualquier cajero automático de la Red Link o Banelco.</li>
+                        <li>Descargá la aplicación TarjetApp desde Google Play y accedé a toda la información de tu tarjeta.</li>
+                         <li>Recibí por mail el e-resumen digital, es más rápido, ecológico y obtené todo el detalle de tus consumos.</li>
+                          <li>Podés pagar el resumen en supermercados Walmart y Changomas, Red Pago Fácil, Pagomiscuentas.com, Bapro y Rapipago.</li>
                     </ul>
-                   <h2>TU TARJETA ES DIGITAL</h2>
-                  <ul>
-                    <li>Con “TarjetApp” en tu celular, accedé a toda la información de tu nueva tarjeta.</li>
-                    <li> Recibí el e-Resumen por mail, llega más rápido, es ecológico y tiene todo el detalle de tus consumos.</li>
-                        
-                </ul>
+                  
                 <h2>REQUISITOS
 </h2>
                   <ul>
                     <li>Sólo con tu DNI.</li>
-                    <li>Edad mínima: 21 años.</li>
-                    <span>Trabajadores autónomos inscriptos en monotributo:</span>
-                    <li>Últimos 2 pagos de Monotributo.</li>
-                    <li>Constancia de inscripción en DGI/AFIP.</li>
-                    <li>Constancia de reempadronamiento.</li>
-                     <span>Trabajadores autónomos inscriptos en Ganancias:</span>
-                    <li>Última DDJJ de Ganancias y comprobante de pago.</li>
-                    <li>Constancia de inscripción en DGI/AFIP.</li>
-                    <span>Jubilados o pensionados:</span>
-                    <li>Último recibo de haberes jubilatorios.</li>
-                     <li class="cierre">Toda la documentación será sujeta a verificación crediticia de Cordial Compañía Financiera S.A.</li>
+                    <li>Edad mínima: 18 años.</li>
+                    <li>Jubilados o pensionados: último recibo de haberes jubilatorios.</li>
+                    <li class="cierre">Toda la documentación será sujeta a verificación crediticia de Cordial Compañía Financiera S.A.</li>
                  </ul>
                     
 
@@ -805,9 +774,11 @@ selector3();
                 <p>
                     
 Tarjeta MasterCard® Walmart: Comisión anual de por renovación de la tarjeta: $404.49. Comisión por mantenimiento de cuenta: $61.50. Cargo por reposición de tarjeta: $38.84.
-Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compañía Financiera S.A. Reconquista 320, Piso 1ro., C.A.B.A., C.U.I.T. Nº 30 70181085 2.   Inscrip. I.G.J. N° 1323, L. 4, Sociedades por Acciones. El otorgamiento de la tarjeta se encuentro sujeto a las condiciones de contratación y análisis crediticio de Cordial Compañía Financiera S.A.
+Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compañía Financiera S.A. Reconquista 320, Piso 1ro., C.A.B.A., C.U.I.T. Nº 30 70181085 2.   Inscrip. I.G.J. N° 1323, L. 4, Sociedades por Acciones. El otorgamiento de la tarjeta se encuentra sujeto a las condiciones de contratación y análisis crediticio de Cordial Compañía Financiera S.A.
 
-                </p>
+                <br>
+                *Disponible cartera consumo. Tarjeta de crédito mastercard walmart (la &rdquo;tarjeta&quot;) emitida por cordial compañía financiera s.a.. Reconquista 320, piso 1ro., c.a.b.a., c.u.i.t. nº 30-70181085-2. – inscrip. I.g.j. n° 1323, l. 4, sociedades por acciones. Válida entre el 14/11/2016 y el 31/12/2016 . El reintegro se aplicará sobre la primera compra realizada en cualquier comercio adherido al sistema first data cono sur s.r.l., dentro de los primeros 45 días posteriores a la fecha de alta de la tarjeta y se verá reflejado en el resumen de cuenta en el que ingrese la transacción. Tope de reintegro $200 por cuenta. No incluye electro. </p>
+                <p>&nbsp; </p>
         
             </div><!--/#legal -->
         </div><!--/.row -->
@@ -825,21 +796,12 @@ Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compa�
 <script src="./archivos/jquery.min.js"></script>
 <script src="./archivos/bootstrap.min.js"></script>
 <script src="./archivos/jquery.base64.min.js"></script>
-
-<!--
 <script src="./archivos/cookie.js"></script>
--->
-
-
 <script src="./archivos/plugins.js"></script>
 
 <script src="./archivos/parsley.min.js"></script>
 <script src="./archivos/form.js"></script>
-
-
 <script src="./archivos/json3.min.js"></script>
-
-
 <script src="./archivos/leads-api-1.0.js"></script>
 
 <script src="./archivos/jquery.dateSelectBoxes.js"></script>
@@ -984,10 +946,8 @@ Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compa�
             }); // End - Document Ready
 </script>
 
-<!-- 
+
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6bc1c39adc","applicationID":"14461293","transactionName":"ZwdXZEFXWEJWWkQPDV5NYEJaGUVeW1BTDxZREBhAQVNFRVZUX0gSWBI=","queueTime":0,"applicationTime":2,"atts":"S0BUEglNS0w=","errorBeacon":"bam.nr-data.net","agent":""}</script>
-
-
 
 
 <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","579731078775194");fbq("track","PageView");</script>
@@ -996,12 +956,12 @@ Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compa�
 <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1057077157683776");fbq("track","PageView");</script>
 <noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1057077157683776&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
 <iframe src="./archivos/pixel.html" style="display: none;"></iframe>
--->
+
 
 
 <script>
 $( document ).ready(function() {
-    $("#exito1").hide();
+    $("#exito").hide();
 });
 
 </script>
