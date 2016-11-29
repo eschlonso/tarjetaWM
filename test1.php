@@ -11,13 +11,25 @@ function selector1(){
 
 
         var items="";
+
+
+
+
+
+
+
       $.getJSON("consultaSucursal.php?prov=0",function(data){
         $.each(data,function(index,item) 
         {
-          items+="<option value='"+item.provincia+"'>"+item.provincia+"</option>";
+          items+="<option value='"+item.provincia+"' >"+item.provincia+"</option>";
         });
         $("#a1_title").html(items); 
+        $("#a1_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
+        /*$('#a1_title').append( "<option value='' >Seleccionar</option>" );*/
       });
+
+
+      
 
 }
 
@@ -37,6 +49,7 @@ $('#a3_title').hide();
           items+="<option value='"+item.localidad+"'>"+item.localidad+"</option>";
         });
         $("#a2_title").html(items); 
+        $("#a2_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
       });
 
 }
@@ -49,12 +62,28 @@ function selector3(){
 
   //alert('hola'+NANA+NONO);
         var items="";
+
+
+/*
+
+        $.ajax({
+  method: "POST",
+  url: "consultaSucursal.php",
+  data: { dire:0,loca:NANA,prov:NONO}
+})
+.done(function( msg ) {
+  alert( "Data Saved: " + msg );
+});
+*/
+
+
       $.getJSON("consultaSucursal.php?dire=0&loca="+NANA+"&prov="+NONO,function(data){
         $.each(data,function(index,item) 
         {
           items+="<option value='"+item.id+"'>"+item.direccion+"</option>";
         });
         $("#a3_title").html(items); 
+        $("#a3_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
       });
 
  
@@ -64,15 +93,7 @@ function selector3(){
 </script>
 </head>
 <body>
-<script type="text/javascript">
 
-
-
-
-$(function(){
-selector1();
-    });
-</script>
 
 
 <br>
@@ -93,7 +114,16 @@ direccion es sucursal.<br>
 
 
 
+<script type="text/javascript">
 
+
+
+
+$(function(){
+selector1();
+
+    });
+</script>
 
 <script>
   
