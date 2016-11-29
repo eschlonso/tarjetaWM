@@ -14,22 +14,29 @@ function selector1(){
 
 
 
+$.ajax({
+  method: "POST",
+  url: "consultaSucursal.php",
+  data: {prov:0}
+})
+.done(function( msg ) {
+  //alert( "Data Saved: " + msg );
+
+  var obj = jQuery.parseJSON( msg );
+  //alert( "Data Saved: " +obj[0].id );
 
 
+  for (i = 0; i < obj.length; i++) {
+  items+="<option value='"+obj[i].provincia+"' >"+obj[i].provincia+"</option>";
+  }
+
+  $("#a1_title").html(items); 
+  $("#a1_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
 
 
-      $.getJSON("consultaSucursal.php?prov=0",function(data){
-        $.each(data,function(index,item) 
-        {
-          items+="<option value='"+item.provincia+"' >"+item.provincia+"</option>";
-        });
-        $("#a1_title").html(items); 
-        $("#a1_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
-        /*$('#a1_title').append( "<option value='' >Seleccionar</option>" );*/
-      });
+});
 
 
-      
 
 }
 
@@ -43,14 +50,34 @@ $('#a3_title').hide();
   NONO=$("#a1_title").val();
  // alert(NONO);
         var items="";
-      $.getJSON("consultaSucursal.php?loca=0&prov="+NONO,function(data){
-        $.each(data,function(index,item) 
-        {
-          items+="<option value='"+item.localidad+"'>"+item.localidad+"</option>";
-        });
-        $("#a2_title").html(items); 
-        $("#a2_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
-      });
+     
+
+
+
+$.ajax({
+  method: "POST",
+  url: "consultaSucursal.php",
+  data: {prov:NONO,loca:0}
+})
+.done(function( msg ) {
+  //alert( "Data Saved: " + msg );
+
+  var obj = jQuery.parseJSON( msg );
+  //alert( "Data Saved: " +obj[0].id );
+
+
+  for (i = 0; i < obj.length; i++) {
+  items+="<option value='"+obj[i].localidad+"' >"+obj[i].localidad+"</option>";
+  }
+
+  $("#a2_title").html(items); 
+  $("#a2_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
+
+
+});
+
+
+
 
 }
 
@@ -64,28 +91,36 @@ function selector3(){
         var items="";
 
 
-/*
 
-        $.ajax({
+
+
+
+$.ajax({
   method: "POST",
   url: "consultaSucursal.php",
-  data: { dire:0,loca:NANA,prov:NONO}
+  data: {dire:0,loca:NANA,prov:NONO}
 })
 .done(function( msg ) {
-  alert( "Data Saved: " + msg );
+  //alert( "Data Saved: " + msg );
+
+  var obj = jQuery.parseJSON( msg );
+  //alert( "Data Saved: " +obj[0].id );
+
+
+  for (i = 0; i < obj.length; i++) {
+  items+="<option value='"+obj[i].sucursal+"' >"+obj[i].direccion+"</option>";
+  }
+
+  $("#a3_title").html(items); 
+  $("#a3_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
+
+
 });
+
+
+/*
+
 */
-
-
-      $.getJSON("consultaSucursal.php?dire=0&loca="+NANA+"&prov="+NONO,function(data){
-        $.each(data,function(index,item) 
-        {
-          items+="<option value='"+item.id+"'>"+item.direccion+"</option>";
-        });
-        $("#a3_title").html(items); 
-        $("#a3_title").prepend("<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>");
-      });
-
  
 }
 

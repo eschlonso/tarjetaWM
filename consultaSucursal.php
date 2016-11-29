@@ -30,14 +30,14 @@ if (!mysql_select_db($dbname, $enlace)) {
     exit;
 }
 
-if (isset($_GET['prov'])){
+if (isset($_POST['prov'])){
 	$sql= "SELECT * FROM sucursales GROUP BY provincia";
 }
-if (isset($_GET['loca'])){
-	$sql= "SELECT * FROM sucursales WHERE provincia='".$_GET['prov']."' GROUP BY localidad";
+if (isset($_POST['loca'])){
+	$sql= "SELECT * FROM sucursales WHERE provincia='".$_POST['prov']."' GROUP BY localidad";
 }
-if (isset($_GET['dire'])){
-	$sql= "SELECT * FROM sucursales WHERE localidad='".$_GET['loca']."' ";
+if (isset($_POST['dire'])){
+	$sql= "SELECT * FROM sucursales WHERE localidad='".$_POST['loca']."' ";
 }
 
 $resultado = mysql_query($sql, $enlace);
