@@ -20,7 +20,7 @@ $.ajax({
   data: {prov:0}
 })
 .done(function( msg ) {
-  //alert( "Data Saved: " + msg );
+  alert( "Data Saved: " + msg );
 
   var obj = jQuery.parseJSON( msg );
   //alert( "Data Saved: " +obj[0].id );
@@ -101,7 +101,7 @@ $.ajax({
   data: {dire:0,loca:NANA,prov:NONO}
 })
 .done(function( msg ) {
-  //alert( "Data Saved: " + msg );
+  alert( "Data Saved: " + msg );
 
   var obj = jQuery.parseJSON( msg );
   //alert( "Data Saved: " +obj[0].id );

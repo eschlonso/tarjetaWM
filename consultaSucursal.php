@@ -1,5 +1,5 @@
 <?php 
-
+header ('Content-type: text/html; charset=utf-8');
 include('conx.php');
 
 
@@ -19,7 +19,6 @@ while($row = mysql_fetch_array($sql, true)){
 };
 echo json_encode($data);
 */
-
 
 if (!$enlace = mysql_connect('',$dbuser,$dbpss)) {
     echo 'No pudo conectarse a mysql';
@@ -53,8 +52,8 @@ if (!$resultado) {
 $count=0;
 while ($fila = mysql_fetch_array($resultado, true)) {
 
-
-$data[] = $fila; 
+$data[]=array_map('utf8_encode',  $fila);
+//$data[] = $fila; 
 $count++;
 
 }
