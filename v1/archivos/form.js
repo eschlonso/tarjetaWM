@@ -113,6 +113,7 @@ $.ajax({
 //console.log(result);
        if(result == 1)
         {
+            alert('result'+result);
             //$('#exito').show();
 
              $("#exito1").show();

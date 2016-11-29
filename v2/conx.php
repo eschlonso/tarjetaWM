@@ -7,8 +7,8 @@ $dbpss='';
 }else{*/
 $dbname='tarjetawalmart';
 $dbuser='root';
-//$dbpss='perrovolador777';//INTERNET
-$dbpss='';//LOCAL
+$dbpss='perrovolador777';//INTERNET
+//$dbpss='';//LOCAL
 //}
 //echo $_SERVER['HTTP_HOST'];
 

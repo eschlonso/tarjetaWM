@@ -466,10 +466,11 @@ Sus datos fueron enviados correctamente,<br>
                         <div id="gender-error" class="col-sm-8 col-sm-offset-4"></div>
                     </div><!--/.form-group -->
 
+<!--
                     <div class="form-group">
                         <div class="col-sm-4 col-label">
                             <label for="condlaboral">Situación Laboral</label>
-                        </div><!--/.col -->
+                        </div>
                         <div class="col-sm-8">
                             <select name="condlaboral" id="condlaboral" class="form-control" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="20">
                                 <option value="" label="Seleccionar..." selected="true" disabled="true">Seleccionar...</option>
@@ -482,8 +483,12 @@ Sus datos fueron enviados correctamente,<br>
                                 <option value="0" label="Desocupado">Desocupado</option>
                                 <option value="2" label="Otros">Otros</option>
                             </select>
-                        </div><!--/.col -->
-                    </div><!--/.form-group -->
+                        </div>
+                    </div>
+-->
+
+
+
 
                     <div id="antlaboral-group" class="form-group hidden">
                         <div class="col-sm-4 col-label">
@@ -517,10 +522,22 @@ Sus datos fueron enviados correctamente,<br>
                         </div><!--/.col -->
                     </div><!--/.form-group -->
 
+
+
+
+
+
+
+
+
+
+
+<!--
+
                     <div class="form-group">
                         <div class="col-sm-4 col-label">
                             <label for="perfilcrediticio">Perfil crediticio</label>
-                        </div><!--/.col -->
+                        </div>
                         <div class="col-sm-8">
                             <select name="perfilcrediticio" id="perfilcrediticio" class="form-control" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="26">
                                 <option value="" label="Seleccionar..." disabled="true" selected="true">Seleccionar...</option>
@@ -528,8 +545,13 @@ Sus datos fueron enviados correctamente,<br>
                                 <option value="1" label="Tengo préstamo y/o tarjeta y estoy al día">Tengo préstamo y/o tarjeta y estoy al día</option>
                                 <option value="2" label="Tengo préstamo y/o tarjeta con atraso mayor a 60 días">Tengo préstamo y/o tarjeta con atraso mayor a 60 días</option>
                             </select>
-                        </div><!--/.col -->
-                    </div><!--/.form-group -->
+                        </div>
+                    </div>
+-->
+
+
+
+
 
                     <div class="form-group">
                         <div class="col-sm-4 col-label">
@@ -540,9 +562,14 @@ Sus datos fueron enviados correctamente,<br>
                         </div><!--/.col -->
                     </div><!--/.form-group -->
 
+
+
+
+
+
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-4 col-label">
-                            <label for="mobilePhone">Teléfono Celular</label>
+                            <label for="mobilePhone">Teléfono de Contacto</label>
                         </div>
                         <div class="col-xs-4 col-sm-3 col-left">
                             <div class="input-group" data-toggle="tooltip" data-placement="top" title="Código de área">
@@ -552,22 +579,31 @@ Sus datos fueron enviados correctamente,<br>
                             <div id="mobilePhoneCodeError"></div>
                         </div><!--/.col -->
                         <div class="col-xs-8 col-sm-5 col-right">
-                            <div class="input-group">
-                                <div class="input-group-addon">15</div>
+                            <div >
+                                <div class="input-group-addon" style="display: none;">15</div>
                                 <input type="tel" name="phone2" id="mobilePhone" value="" placeholder="Teléfono celular" class="form-control" style="border-bottom-right-radius: 4px; border-top-right-radius: 4px;" maxlength="10" data-toggle="tooltip" data-placement="top" title="No incluir código de área ni 15" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-maxlength="10" data-parsley-maxlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-errors-container="#mobilePhoneError" data-parsley-group="mobilePhone" data-parsley-id="32">
                             </div><!--/.input-group -->
                             <div id="mobilePhoneError"></div>
                         </div>
                     </div><!--/.form-group -->
 
-                    <div class="form-group">
+
+
+
+
+ <div class="form-group">
                         <div class="col-xs-12 col-sm-4 col-label">
-                            <label for="phone">Teléfono Fijo (opcional)</label>
+                            <label for="phone">Teléfono Alternativo (opcional)</label>
                         </div>
                         <div class="col-xs-4 col-sm-3 col-left">
                             <div class="input-group" data-toggle="tooltip" data-placement="top" title="Código de área">
                                 <div class="input-group-addon">0</div>
-                                <input type="tel" name="phoneCode" id="phonecode" value="" placeholder="Prefijo" class="form-control" maxlength="4" data-parsley-trigger="change" data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="2" data-parsley-minlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-maxlength="4" data-parsley-maxlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-errors-container="#phoneCodeError" data-parsley-group="phone" data-parsley-id="34">
+                                <input type="tel" name="phoneCode" id="phonecode" value="" placeholder="Prefijo" class="form-control" maxlength="4" data-parsley-trigger="change" data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="2" data-parsley-minlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-maxlength="4" data-parsley-maxlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-errors-container="#phoneCodeError" data-parsley-group="phone" data-parsley-id="34"
+
+
+
+
+                                >
                             </div><!--/.input-group -->
                             <div id="phoneCodeError"></div>
                         </div><!--/.col -->
@@ -581,25 +617,62 @@ Sus datos fueron enviados correctamente,<br>
 
 
 
-<div id="p1">
-Provincia<br>
+
+
+                   
+  <div class="form-group">
+                        <div class="col-sm-4 col-label">
+                            <label for="condlaboral">Tu código Postal</label>
+                        </div>
+                        <div class="col-sm-8">
+                            
+                 <input type="text" name="codigoPostal" id="codigoPostal" value="" placeholder="Ingresar sólo números" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El documento debe contener entre 6 y 8 dígitos." data-parsley-maxlength="8" data-parsley-maxlength-message="El documento debe contener entre 6 y 8 dígitos." data-parsley-id="6">
+
+
+                        </div>
+                    </div>
+
+
+
+<div id="p1" class="form-group">
+<div class="col-sm-4 col-label" >
+ <label class="condlaboral">Provincia</label>    <br>
+
+</div>
+
+<div class="col-sm-8">
+  
+
 <select id="a1_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
   <option>Default</option>
 </select>
 </div>
 
-<div id="p2">
-<br>Localidad<br>
+</div>
+
+<div id="p2" class="form-group">
+
+<div class="col-sm-4 col-label" >
+ <label class="condlaboral">Localidad</label> 
+
+</div><div class="col-sm-8">
 <select id="a2_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
   <option>Default</option>
 </select>
 </div>
+</div>
 
-<div id="p3">
-<br>Sucursal<br>
+<div id="p3" class="form-group">
+<div class="col-sm-4 col-label" >
+ <label class="condlaboral">Sucursal</label> 
+
+</div>
+<div class="col-sm-8">
 <select id="a3_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
   <option>Default</option>
-</select></div>
+</select>
+</div>
+</div>
 
 
 
@@ -720,7 +793,7 @@ selector3();
                             </div><!--/.checkbox -->
                         </div><!--/.col -->
                         <div class="col-sm-8 col-sm-offset-2">
-                            <button type="submit" name="SolicitarPrestamo" id="SolicitarPrestamo" class="btn btn-warning btn-lg btn-block" data-loading-text="&lt;i class=&#39;fa fa-spinner fa-spin&#39;&gt;&lt;/i&gt; Enviando...">
+                            <button type="submit" name="SolicitarPrestamo" id="SolicitarPrestamo" class="btn btn-warning btn-lg btn-block" data-loading-text="Enviando...">
                                 ME INTERESA
                             </button>
                         </div><!--/.col -->
