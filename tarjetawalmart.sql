@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-11-2016 a las 20:29:45
+-- Tiempo de generación: 29-11-2016 a las 01:36:13
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -60,6 +60,33 @@ INSERT INTO `formulario1` (`id`, `tipo_dni`, `dni`, `nombre`, `apellido`, `fecha
 (6, 'DNI', '23423423', 'sadfsdfd', 'aadasdada', '1999-1-1', 'M', 'Empleado publico', 'Mas de 1 ano', '5000-10000', 'No tengo préstamos ni tarjetas de crédito', 'sadsadsa@sadsad.com', '212121213', '12122121', 'Chubut', 'Comodoro Rivadavia', 'Si'),
 (7, 'DNI', '22342342', 'adsadsa', 'dsadsadsad', '1996-2-2', 'F', 'Fuerzas Armadas / Fuerzas de Seguridad', 'Menos de 1 ano', '5000-10000', 'Tengo préstamo y/o tarjeta con atraso mayor a 60 días', 'sadsada@sdsafsd.com', '1111111112121', '1212121212', 'Buenos Aires', 'Punta Alta', 'Si'),
 (8, 'DNI', '3213213', 'asdsad', 'asdasdad', '1997-2-3', 'M', 'Fuerzas Armadas / Fuerzas de Seguridad', 'Mas de 1 ano', '5000-10000', 'No tengo préstamos ni tarjetas de crédito', 'sdaasd@sesdf.com', '111211212', '1212121', 'Buenos Aires', 'Bahia Blanca', 'Si');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sucursales`
+--
+
+CREATE TABLE IF NOT EXISTS `sucursales` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `provincia` varchar(255) NOT NULL,
+  `localidad` varchar(255) NOT NULL,
+  `direccion` varchar(255) NOT NULL,
+  `sucursal` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Volcado de datos para la tabla `sucursales`
+--
+
+INSERT INTO `sucursales` (`id`, `provincia`, `localidad`, `direccion`, `sucursal`) VALUES
+(1, 'BUENOS AIRES', 'Almirante Brown', 'Changomas - Avenida Espora  2074', '299'),
+(2, 'BUENOS AIRES', 'Avellaneda', 'Walmart - Autopista Buenos Aires La Plata Km. 9 ', '301'),
+(3, 'BUENOS AIRES', 'Avellaneda', 'Walmart - Avenida Circunvalación  2557', '316'),
+(4, 'BUENOS AIRES', 'Baha Blanca', 'Walmart - Sarmiento  4114', '318'),
+(5, 'CORDOBA', 'cordoba capital', 'Walmart - Juan B. Justo  2052', '394'),
+(6, 'CORDOBA', 'Rio Cuarto', 'HCNAGO MAS- Mitre  643', '545');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
