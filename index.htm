@@ -51,6 +51,138 @@
 
 
 
+<script src="archivos/jquery.min.js" type="text/javascript"></script>
+
+<script>
+  
+function selector1(){
+
+
+        var items="";
+
+
+
+$.ajax({
+  method: "POST",
+  url: "consultaSucursal.php",
+  data: {prov:0}
+})
+.done(function( msg ) {
+  //alert( "Data Saved: " + msg );
+
+  var obj = jQuery.parseJSON( msg );
+  //alert( "Data Saved: " +obj[0].id );
+
+items+="<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>";
+
+
+  for (i = 0; i < obj.length; i++) {
+  items+="<option value='"+obj[i].provincia+"' >"+obj[i].provincia+"</option>";
+  }
+
+  $("#a1_title").html(items); 
+
+
+});
+
+
+
+}
+
+function selector2(){
+
+//alert('tocaste aqui');
+
+
+
+  NONO=$("#a1_title").val();
+ // alert(NONO);
+        var items="";
+     
+
+
+
+$.ajax({
+  method: "POST",
+  url: "consultaSucursal.php",
+  data: {prov:NONO,loca:0}
+})
+.done(function( msg ) {
+  //alert( "Data Saved: " + msg );
+
+  var obj = jQuery.parseJSON( msg );
+  //alert( "Data Saved: " +obj[0].id );
+
+items+="<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>";
+
+  for (i = 0; i < obj.length; i++) {
+  items+="<option value='"+obj[i].localidad+"' >"+obj[i].localidad+"</option>";
+  }
+
+  $("#a2_title").html(items); 
+
+
+});
+
+
+
+
+}
+
+
+function selector3(){
+
+  NONO=$("#a1_title").val();
+  NANA=$("#a2_title").val();
+
+  //alert('hola'+NANA+NONO);
+        var items="";
+
+
+
+
+
+
+$.ajax({
+  method: "POST",
+  url: "consultaSucursal.php",
+  data: {dire:0,loca:NANA,prov:NONO}
+})
+.done(function( msg ) {
+  //alert( "Data Saved: " + msg );
+
+  var obj = jQuery.parseJSON( msg );
+  //alert( "Data Saved: " +obj[0].id );
+
+items+="<option disabled='true' label='Seleccionar' selected='true'>Seleccionar</option>";
+
+  for (i = 0; i < obj.length; i++) {
+  items+="<option value='"+obj[i].sucursal+"' >"+obj[i].direccion+"</option>";
+  }
+
+  $("#a3_title").html(items); 
+
+
+
+});
+
+
+/*
+
+*/
+ 
+}
+
+
+</script>
+
+
+
+
+
+
+
+
 
 
 
@@ -455,9 +587,79 @@ Sus datos fueron enviados correctamente.
 ---------------------
 <br>
 
-provincia<br>
-sucursal<br>
-direccion<br>
+
+
+<br>
+<div id="p1">
+Provincia<br>
+<select id="a1_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
+  <option>Default</option>
+</select>
+</div>
+<br>
+<div id="p2">
+Localidad<br>
+<select id="a2_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
+  <option>Default</option>
+</select>
+</div>
+<br>
+<div id="p3">
+Sucursal<br>
+<select id="a3_title" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
+  <option>Default</option>
+</select></div>
+
+<br>
+
+
+
+<script type="text/javascript">
+
+
+
+
+$(function(){
+selector1();
+
+    });
+</script>
+
+<script>
+  
+$('#p2').hide();
+$('#p3').hide();
+
+  $('#a1_title').on('change', function(){
+
+  
+
+selector2();
+
+
+ $("#p2").show();
+ $("#p3").hide();
+
+
+});
+
+
+
+  $('#a2_title').on('change', function(){
+
+  
+
+selector3();
+ $("#p3").show();
+
+
+
+});
+
+
+
+</script>
+
 
 ---------------------
 
