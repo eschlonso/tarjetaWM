@@ -405,3 +405,18 @@ color: #ffffff;
     text-decoration: underline;
 }
 
+.formatoTexto1{
+   text-transform: capitalize;
+
+}
+
+.letritas{
+font-size: 12px;
+ font-style: italic;
+padding-left: 15px;
+
+}
+
+
+
+

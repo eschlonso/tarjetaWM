@@ -1,14 +1,11 @@
-<?php 
+<?php
 header ('Content-type: text/html; charset=utf-8');
 include('conx.php');
-
-
 ?>
 
 
 
 <?php
-
 
 /*
 $q = "select id, name from college";
@@ -52,9 +49,11 @@ if (!$resultado) {
 $count=0;
 while ($fila = mysql_fetch_array($resultado, true)) {
 
-$data[]=array_map('utf8_encode',  $fila);
-//$data[] = $fila; 
-$count++;
+    //$fila = ucwords($fila);
+
+    $data[]=array_map('utf8_encode',  $fila);
+    //$data[] = $fila; 
+    $count++;
 
 }
 

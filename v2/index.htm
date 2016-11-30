@@ -173,7 +173,15 @@ items+="<option disabled='true' label='Seleccionar' selected='true'>Seleccionar<
 
 
 
+<script>
+  
+$(document).ready(function() {
+    //$('#a1_title').css('text-transform','lowercase');
+});
 
+
+
+</script>
 
 
 
@@ -260,7 +268,7 @@ var google_remarketing_only = false;
        <h1>Completá tus datos y empezá a comprar bien</h1>
             <div class="col-md-7 mrg">
 
-                <div id="exito"> 
+                <div id="exito" style="visibility: none;"> 
                     
 <p>
 
@@ -285,9 +293,10 @@ Sus datos fueron enviados correctamente,<br>
                         <div class="col-xs-3 col-sm-2 col-left">
                             <select name="documentType" id="documentType" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
                                 <option value="" label="Tipo..." selected="true" disabled="true">Tipo...</option>
-                                <option value="1" label="DNI">DNI</option>
-                                <option value="2" label="L.E.">L.E.</option>
-                                <option value="3" label="L.C.">L.C.</option>
+                                <option value="1" label="DOCUMENTO UNICO">DOCUMENTO UNICO</option>
+                                <option value="3" label="LIBRETA CIVIL">LIBRETA CIVIL</option>
+                                <option value="4" label="LIBRETA ENROLAMIENTO">LIBRETA ENROLAMIENTO</option>
+                                <option value="99" label="EXTRANJERO">EXTRANJERO</option>
                             </select>
                         </div><!--/.col -->
                         <div class="col-xs-9 col-sm-6 col-right">
@@ -573,7 +582,7 @@ Sus datos fueron enviados correctamente,<br>
                         </div>
                         <div class="col-xs-4 col-sm-3 col-left">
                             <div class="input-group" data-toggle="tooltip" data-placement="top" title="Código de área">
-                                <div class="input-group-addon">0</div>
+                                <div class="input-group-addon" style="display:none;">0</div>
                                 <input type="tel" name="phoneCode2" id="mobilePhoneCode" value="" placeholder="Prefijo" class="form-control" maxlength="4" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="2" data-parsley-minlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-maxlength="4" data-parsley-maxlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-errors-container="#mobilePhoneCodeError" data-parsley-group="mobilePhone" data-parsley-id="30">
                             </div><!--/.input-group -->
                             <div id="mobilePhoneCodeError"></div>
@@ -597,7 +606,7 @@ Sus datos fueron enviados correctamente,<br>
                         </div>
                         <div class="col-xs-4 col-sm-3 col-left">
                             <div class="input-group" data-toggle="tooltip" data-placement="top" title="Código de área">
-                                <div class="input-group-addon">0</div>
+                                <div class="input-group-addon" style="display:none;">0</div>
                                 <input type="tel" name="phoneCode" id="phonecode" value="" placeholder="Prefijo" class="form-control" maxlength="4" data-parsley-trigger="change" data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="2" data-parsley-minlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-maxlength="4" data-parsley-maxlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-errors-container="#phoneCodeError" data-parsley-group="phone" data-parsley-id="34"
 
 
@@ -626,8 +635,7 @@ Sus datos fueron enviados correctamente,<br>
                         </div>
                         <div class="col-sm-8">
                             
-                 <input type="text" name="codigoPostal" id="codigoPostal" value="" placeholder="Ingresar sólo números" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El documento debe contener entre 6 y 8 dígitos." data-parsley-maxlength="8" data-parsley-maxlength-message="El documento debe contener entre 6 y 8 dígitos." data-parsley-id="6">
-
+                 <input type="text" name="codigoPostal" id="codigoPostal" value="" placeholder="Ingresar código postal" class="form-control" data-parsley-trigger="focusout" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="6">
 
                         </div>
                     </div>
@@ -812,14 +820,14 @@ selector3();
                 <ul>
                  
                         <li>Es MasterCard internacional, usala donde quieras.</li>
-                        <li>Todos los días 4 cuotas sin interés en Walmart y Changomas.</li>
-                        <li>Todos los jueves 15% de ahorro en Walmart y Changomas.</li>
-                        <li>Todos los días 20% de ahorro en walmartonline.com.ar.</li>
-                        <li>Sábados y domingos 25% de descuento en Mc Donald`s y 2x1 en cines.</li>
+                        <li>Todos los días 4 cuotas sin interés en Walmart y Changomas. <span class="letritas">(1)(4)(5)</span></li>
+                        <li>Todos los jueves 15% de ahorro en Walmart y Changomas. <span class="letritas">(1)(2)(3)(5)</span></li>
+                        <li>Todos los días 20% de ahorro en walmartonline.com.ar. <span class="letritas">(1)(2)(8)</span></li>
+                        <li>Sábados y domingos 25% de descuento en Mc Donald`s <span class="letritas">(1)(2)(7)</span> y 2x1 en cines. <span class="letritas">(1)(2)(6)</span></li>
                         <li>Podés pedir hasta 4 adicionales sin cargo.</li>
                         <li>Podés elegir la fecha de vencimiento.</li>
-                        <li>Descargá la aplicación TarjetApp desde Google Play y accedé a toda la información de tu tarjeta.</li>
-                         <li>Recibí por mail el e-resumen digital, es más rápido, ecológico y obtené todo el detalle de tus consumos.</li>
+                        <li>Descargá la aplicación TarjetApp desde Google Play y accedé a toda la información de tu tarjeta. <span class="letritas">(9)</span></li>
+                         <li>Recibí por mail el e-resumen digital, es más rápido, ecológico y obtené todo el detalle de tus consumos. <span class="letritas">(10)</span></li>
                           <li>Podés pagar el resumen en supermercados Walmart y Changomas, Red Pago Fácil, Pagomiscuentas.com, Bapro y Rapipago.</li>
                     </ul>
                   
@@ -844,7 +852,34 @@ selector3();
         <div class="row">
         <div class="col-sm-4 col-sm-offset-4 sf"><img src="archivos/servicios-financieros.svg" alt="Servicios "/></div>
             <div id="legal" class="col-xs-12">
-                <p>
+
+
+
+
+<p style="text-transform: lowercase;">
+
+1)       VÁLIDO PARA COMPRAS  ABONADAS CON TARJETAS DE CRÉDITO MASTERCARD WALMART (LA “TARJETA DE CRÉDITO”) EMITIDAS POR  CORDIAL COMPAÑÍA FINANCIERA S.A. EJ.: (I) SI COMPRA UN PRODUCTO POR $2.400, EN 12  CUOTAS SE LE REINTEGRARÁ EL 15% DEL PRECIO, ES DECIR $360.  DESDE EL 1ER. Y HASTA EL 12AVO RESUMEN QUE SE EMITA CON POSTERIORIDAD AL CIERRE Y LUEGO DE REALIZADA LA COMPRA,  SE VERÁ REFLEJADO UN CONSUMO DE $200 EN CADA UNO DE ELLOS. EL REINTEGRO DE $360 SE REFLEJARÁ EN EL 1ER.  O 2DO. RESUMEN. (II) P/LA COMPRA DE UN PRODUCTO CUYO PRECIO FUERA $1.200 SE REALIZARÁ UN DESCUENTO VÍA REINTEGRO DEL 15% SOBRE EL PRECIO. EN EL 1ER. RESUMEN QUE SE EMITA CON POSTERIORIDAD AL CIERRE Y LUEGO DE REALIZADA LA COMPRA SE VERÁ REFLEJADO UN CONSUMO DE $1.200 Y EL REINTEGRO DE $180 SE VERÁ REFLEJADO EN EL 1ER. O 2DO. RESUMEN.
+<br>
+2)      EL REINTEGRO SE VERÁ REFLEJADO EN EL 1ER. O 2DO RESUMEN TRAS LA COMPRA Y LUEGO DEL CIERRE. <br>
+3)      PARA COMPRAS REALIZADAS EN UN PAGO. SE EXCLUYEN PRODUCTOS DE ELECTRO. VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO POR TRANSACCIÓN Y POR CUENTA $300. <br>
+4)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. 4 CUOTAS SIN INTERÉS, 6  CUOTAS SIN INTERÉS: TASA NOMINAL ANUAL (TNA) 0%, TASA EFECTIVA ANUAL (TEA) 0%. COSTO FINANCIERO TOTAL NOMINAL ANUAL (CFTNA): (0.00%).EL CFTNA Y DEMÁS DATOS ECONÓMICOS INFORMADOS EN EL PRESENTE CORRESPONDEN EXCLUSIVAMENTE A LA OPERACIÓN DE COMPRA EN CUOTAS OBJETO DE LA PRESENTE.<br>
+5)      PARA COMPRAS REALIZADAS EN LOCALES WALMART Y CHANGOMÁS UBICADOS EN LA REPÚBLICA ARGENTINA.<br>
+6)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. EN LA COMPRA DE  DOS ENTRADAS PARA CINES, SE BONIFICARÁ EL PRECIO DE UNA DE ELLAS, CON UN TOPE POR CUENTA Y POR MES $120.<br>
+7)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO $ 100 POR CUENTA Y POR MES. <br>
+8)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO POR CUENTA Y POR TRANSACCIÓN $500. TOPE DE TRANSACCIONES POR MES 2 (DOS).<br>
+9)      LA APLICACIÓN TARJETAPP (LA “APLICACIÓN”)  ES  ADMINISTRADA CORDIAL COMPAÑÍA FINANCIERA S.A.  LA APLICACIÓN ESTARÁ DISPONIBLE PARA CLIENTES TITULARES DE TARJETAS DE CRÉDITO MASTERCARD WALMART Y/O DE TARJETAS DE CRÉDITO WALMART EMITIDAS POR CORDIAL.  DISPONIBLE PARA SMARTPHONES Y/O TABLETS CON LOS SISTEMAS OPERATIVOS ANDROID. LA APLICACIÓN SE PODRÁ BAJAR DE GOOGLE PLAY. LA APLICACIÓN NO REEMPLAZA LA EMISIÓN DEL RESUMEN MENSUAL EN LOS TÉRMINOS DEL ART. 23 DE LA LEY DE TARJETAS DE CRÉDITO. EL ACCESO A LA APLICACIÓN ESTÁ SUJETA A LOS TÉRMINOS Y CONDICIONES Y POLÍTICAS QUE REGULAN EL USO Y FUNCIONAMIENTO DE LA MISMA.<br>
+10)   AL SOLICITAR LA ADHESIÓN AL RESUMEN DIGITAL DE TARJETAS DE CRÉDITO MASTERCARD WALMART EMITIDAS POR CORDIAL, EL CLIENTE SOLICITA MODIFICAR EL SISTEMA DE ENVÍO POR CORREO POSTAL AL SISTEMA REMISIÓN POR CORREO ELECTRÓNICO, DEJANDO SIN EFECTO EL ENVÍO POR CORREO POSTAL. EL RESUMEN DIGITAL, ESTARÁ A DISPOSICIÓN DEL CLIENTE CON LA PERIODICIDAD ESTABLECIDA POR LAS NORMAS.<br>
+// CORDIAL COMPAÑÍA FINANCIERA S.A. RECONQUISTA 320, PISO 1RO., C.A.B.A., C.U.I.T. Nº 30-70181085-2. – INSCRIP. I.G.J. N° 1323, L. 4, SOCIEDADES POR ACCIONES. PROMOCIONES NO ACUMULABLES NI COMBINABLES CON OTRAS VIGENTES.  
+ 
+ </p>
+
+
+<br>
+
+
+ <p>
+
+               
                     
 Tarjeta MasterCard® Walmart: Comisión anual de por renovación de la tarjeta: $404.49. Comisión por mantenimiento de cuenta: $61.50. Cargo por reposición de tarjeta: $38.84.
 Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compañía Financiera S.A. Reconquista 320, Piso 1ro., C.A.B.A., C.U.I.T. Nº 30 70181085 2.   Inscrip. I.G.J. N° 1323, L. 4, Sociedades por Acciones. El otorgamiento de la tarjeta se encuentra sujeto a las condiciones de contratación y análisis crediticio de Cordial Compañía Financiera S.A.

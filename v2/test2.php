@@ -22,7 +22,7 @@ if (!$conn) {
 }
 
 
-
+/*
 $nombre=utf8_decode($_POST['name']);
 $apellido=utf8_decode($_POST['lastName']);
 
@@ -37,40 +37,40 @@ $antlaboral=utf8_decode($_POST['antlaboral']);
 
 $perfil_crediticio=utf8_decode($_POST['perfilcrediticio']);
 $email=$_POST['email'];
-$celular=$_POST['phone'];
-$telefono_fijo=$_POST['mobilePhone'];
+$celular=$_POST['mobilePhone'];
+$telefono_fijo=$_POST['phone'];
 $provincia=utf8_decode($_POST['prov']);
 $recibir_promo_ofertas=$_POST['newsletter'];
 $sucursal=utf8_decode($_POST['sucursal']);
 
 
 
-$codigoPostal=$_POST['codigoPostal'];//$_POST['codigoPostal'];
-$hoy=date("Y-m-d H:i:s");//"2017-01-01";
-/*
-
-//utf8_decode
-$nombre=$_POST['name'];
-$apellido=$_POST['lastName'];
-
-
-$dni=$_POST['documentIdentifier'];
-$tipo_dni=$_POST['documentType'];
-$fecha_nacimiento=$_POST['fecha_nac'];
-$sexo=$_POST['gender'];
-$situacion_laboral=$_POST['condlaboral'];
-$ingreso_mensual=$_POST['aproxsalary'];
-$antlaboral=$_POST['antlaboral'];
-
-$perfil_crediticio=$_POST['perfilcrediticio'];
-$email=$_POST['email'];
-$celular=$_POST['mobilePhone'];
-$telefono_fijo=$_POST['phone'];
-$provincia=$_POST['prov'];
-$recibir_promo_ofertas=$_POST['newsletter'];
-$sucursal=$_POST['sucursal'];
-
+$codigo_postal="777777";
+$hoy="2017-01-01";//date("Y-m-d");  
 */
+
+
+$nombre="sadasdsda";
+$apellido="sadasdsda";
+
+
+$dni="sadasdsda";
+$tipo_dni="sadasdsda";
+$fecha_nacimiento="sadasdsda";
+$sexo="sadasdsda";
+$situacion_laboral="sadasdsda";
+$ingreso_mensual="sadasdsda";
+$antlaboral="sadasdsda";
+
+$perfil_crediticio="sadasdsda";
+$email="sadasdsda";
+$celular="sadasdsda";
+$telefono_fijo="sadasdsda";
+$provincia="sadasdsda";
+$recibir_promo_ofertas="sadasdsda";
+$sucursal="sadasdsda";
+
+
 
 
 /*
@@ -98,9 +98,13 @@ $sql = "INSERT INTO formulario1 (tipo_dni,dni,nombre,apellido,fecha_nacimiento,s
 VALUES ('".$tipo_dni."','".$dni."','".$nombre."','".$apellido."','".$fecha_nacimiento."','".$sexo."','".$situacion_laboral."','".$antlaboral."','".$ingreso_mensual."','".$perfil_crediticio."','".$email."','".$celular."','".$telefono_fijo."','".$provincia."','".$recibir_promo_ofertas."','".$sucursal."')";
 */
 
-$sql = "INSERT INTO formulario1 (tipo_dni,dni,nombre,apellido,fecha_nacimiento,sexo,situacion_laboral,antlaboral,ingreso_mensuales,perfil_crediticio,email,telalternativo,telefono_fijo,provincia,recibir_promo_ofertas,sucursal,fecha_alta,producto,subproducto,empresa,promocion,canal,tramiteproceid,postalcodi,clipropiedadtipoid,monto,cliivaid)
-VALUES ('".$tipo_dni."','".$dni."','".$nombre."','".$apellido."','".$fecha_nacimiento."','".$sexo."','".$situacion_laboral."','".$antlaboral."','".$ingreso_mensual."','".$perfil_crediticio."','".$email."','".$celular."','".$telefono_fijo."','".$provincia."','".$recibir_promo_ofertas."','".$sucursal."','".$hoy."','110','89','81','1','1','1','".$codigoPostal."','1','7000','4')";
 
+$sql = "INSERT INTO formulario1 (tipo_dni,dni,nombre,apellido,fecha_nacimiento,sexo,situacion_laboral,antlaboral,ingreso_mensuales,perfil_crediticio,email,telalternativo,telefono_fijo,provincia,recibir_promo_ofertas,sucursal,fecha_alta,producto,subproducto,empresa,promocion,canal,tramiteproceid,postalcodi,clipropiedadtipoid,monto,cliivaid)
+VALUES ('".$tipo_dni."','".$dni."','".$nombre."','".$apellido."','".$fecha_nacimiento."','".$sexo."','".$situacion_laboral."','".$antlaboral."','".$ingreso_mensual."','".$perfil_crediticio."','".$email."','".$celular."','".$telefono_fijo."','".$provincia."','".$recibir_promo_ofertas."','".$sucursal."','2017-01-01','110','89','81','1','1','1','656576','1','7000','4')";
+
+//,producto,subproducto,empresa,promocion,canal,tramiteproceid,postalcodi,clipropiedadtipoid,monto,cliivaid
+
+//,'110','89','81','1','1','1','656576','1','7000','4'
 
 
 

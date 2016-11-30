@@ -55,11 +55,11 @@ situacion_laboral=$("#condlaboral").val();
 ingreso_mensual=$("#aproxsalary").val();
 perfil_crediticio=$("#perfilcrediticio").val();
 email=$("#email").val();
-celular=$("#mobilePhoneCode").val()+$("#mobilePhone").val();
-telefono_fijo=$("#phone").val();
+celular='('+$("#mobilePhoneCode").val()+') '+$("#mobilePhone").val();
+telefono_fijo='('+$("#phonecode").val()+') '+$("#phone").val();
 //provincia= $("#prov").html();
 provincia=$('#prov :selected').attr('label');
-
+codigo_postal=$("#codigoPostal").val();
 
 //recibir_promo_ofertas=$("#newsletter").val();
 if ($('#newsletter:checked').val() !== undefined)
@@ -72,17 +72,19 @@ if ($('#newsletter:checked').val() !== undefined)
 }
 
 //alert("sucursal "+$("#sucursal").val());
-
+/*
 if(document.getElementById("sucursal") !== null)
-{
+{*/
     //sucursal=$("#sucursal").val();
-    sucursal=$('#sucursal :selected').html();
+    //sucursal=$('#sucursal :selected').html();
+sucursal=$('#a3_title').val();
+    /*
     //alert("tiene sucursal"+sucursal);
 }else{
     //alert('no tiene sucursal');
     sucursal=" ";
 }
-
+*/
 //alert("condlaboral "+$("#condlaboral").val());
 
 if($("#condlaboral").val() == "Jubilado" || $("#condlaboral").val() == "Desocupado" || $("#condlaboral").val() == "Otros" )
@@ -107,10 +109,10 @@ if($("#condlaboral").val() == "Jubilado" || $("#condlaboral").val() == "Desocupa
 $.ajax({
   type: "POST",
   url: "insertar.php",
-  data: 'name='+nombre+'&lastName='+apellido+'&documentIdentifier='+dni+'&documentType='+tipo_dni+'&fecha_nac='+fecha_nacimiento+'&gender='+sexo+'&condlaboral='+situacion_laboral+'&antlaboral='+antlaboral+'&aproxsalary='+ingreso_mensual+'&perfilcrediticio='+perfil_crediticio+'&phone='+telefono_fijo+'&perfilcrediticio='+perfil_crediticio+'&email='+email+'&mobilePhone='+celular+'&prov='+provincia+'&newsletter='+recibir_promo_ofertas+'&sucursal='+sucursal,
+  data: 'name='+nombre+'&lastName='+apellido+'&documentIdentifier='+dni+'&documentType='+tipo_dni+'&fecha_nac='+fecha_nacimiento+'&gender='+sexo+'&condlaboral='+situacion_laboral+'&antlaboral='+antlaboral+'&aproxsalary='+ingreso_mensual+'&perfilcrediticio='+perfil_crediticio+'&phone='+telefono_fijo+'&perfilcrediticio='+perfil_crediticio+'&email='+email+'&mobilePhone='+celular+'&prov='+provincia+'&newsletter='+recibir_promo_ofertas+'&sucursal='+sucursal+'&codigoPostal='+codigo_postal,
   datatype: "html",
   success: function(result){
-//console.log(result);
+console.log(result);
        if(result == 1)
         {
             //alert('result'+result);
