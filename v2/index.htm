@@ -270,15 +270,7 @@ var google_remarketing_only = false;
 
                 <div id="exito" style="visibility: none;"> 
                     
-<p>
 
-
-Sus datos fueron enviados correctamente,<br>
- nos comunicaremos con ustedes a la brevedad.<br>
- <a href="" name="result">Volver</a> 
-
-
-</p>
                 </div>
                <!-- <div id="h1-container">
                     <h1>Completá tus datos</h1>
@@ -290,7 +282,7 @@ Sus datos fueron enviados correctamente,<br>
                         <div class="col-sm-4 col-label">
                             <label for="documentIdentifier">Doc. de Identidad</label>
                         </div><!--/.col -->
-                        <div class="col-xs-3 col-sm-4 col-left">
+                        <div class="col-xs-12 col-sm-4">
                             <select name="documentType" id="documentType" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="4">
                                 <option value="" label="Tipo..." selected="true" disabled="true">Tipo...</option>
                                 <option value="1" label="DOCUMENTO UNICO">DOCUMENTO UNICO</option>
@@ -299,8 +291,8 @@ Sus datos fueron enviados correctamente,<br>
                                 <option value="99" label="EXTRANJERO">EXTRANJERO</option>
                             </select>
                         </div><!--/.col -->
-                        <div class="col-xs-9 col-sm-4 col-right">
-                            <input type="text" name="documentIdentifier" id="documentIdentifier" value="" placeholder="Ingresar sólo números" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El documento debe contener entre 6 y 8 dígitos." data-parsley-maxlength="8" data-parsley-maxlength-message="El documento debe contener entre 6 y 8 dígitos." data-parsley-id="6">
+                        <div class="col-xs-12 col-sm-4">
+                            <input type="text" name="documentIdentifier" id="documentIdentifier" value="" placeholder="Ingresar sólo números" class="form-control" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El documento debe contener entre 6 y 9 dígitos." data-parsley-maxlength="9" data-parsley-maxlength-message="El documento debe contener entre 6 y 9 dígitos." data-parsley-id="6">
                         </div><!--/.col -->
                     </div><!--/.form-group -->
 
@@ -308,16 +300,16 @@ Sus datos fueron enviados correctamente,<br>
                         <div class="col-sm-4 col-label">
                             <label for="name">Nombre y Apellido</label>
                         </div><!--/.col -->
-                        <div class="col-xs-6 col-sm-4 col-left">
+                        <div class="col-xs-12 col-sm-4" >
                             <input type="text" name="name" id="name" value="" class="form-control" placeholder="Ingresar nombre..." data-parsley-trigger="focusout" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="8">
                         </div><!--/.col -->
-                        <div class="col-xs-6 col-sm-4 col-right">
+                        <div class="col-xs-12 col-sm-4">
                             <input type="text" name="lastName" id="lastName" value="" class="form-control" placeholder="Ingresar apellido..." data-parsley-trigger="focusout" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-id="10">
                         </div><!--/.col -->
                     </div><!--/.form-group -->
 
                     <div class="form-group">
-                        <div class="col-xs-12 col-sm-4 col-label"><label for="age">Fecha de Nacimiento</label></div><div style="padding-right: 0px;" class=" col-xs-3 col-sm-2">
+                        <div class="col-xs-12 col-sm-4 col-label"><label for="age">Fecha de Nacimiento</label></div><div class=" col-xs-12 col-sm-2" >
                             <select class="form-control" id="day" name="day" data-parsley-trigger="change" data-parsley-errors-container="#gender-day" data-parsley-required="true" data-parsley-required-message="El campo es requerido." data-parsley-id="12">
                                 <option label="Día" value="">Día</option>
                                 <option label="1" value="1">1</option>
@@ -352,7 +344,7 @@ Sus datos fueron enviados correctamente,<br>
                                 <option label="30" value="30">30</option>
                                 <option label="31" value="31">31</option>
                             </select></div>
-                        <div style="padding-left: 5px; padding-right: 0px;" class=" col-xs-5 col-sm-3">
+                        <div class=" col-xs-12 col-sm-3">
                             <select class="form-control" id="month" name="month" data-parsley-trigger="change" data-parsley-errors-container="#gender-month" data-parsley-required="true" data-parsley-required-message="El campo es requerido." data-parsley-id="14">
                                 <option label="Mes" value="">Mes</option>
                                 <option label="Enero" value="1">Enero</option>
@@ -368,7 +360,7 @@ Sus datos fueron enviados correctamente,<br>
                                 <option label="Noviembre" value="11">Noviembre</option>
                                 <option label="Diciembre" value="12">Diciembre</option>
                             </select></div>
-                        <div style="padding-left: 5px; " class=" col-xs-4 col-sm-3">
+                        <div class=" col-xs-12 col-sm-3">
                             <select class="form-control" id="year" name="year" data-parsley-trigger="change" data-parsley-errors-container="#gender-year" data-parsley-required="true" data-parsley-required-message="El campo es requerido." data-parsley-id="16">
                                 <option label="Año" value="">Año</option>
                                                                     <option label="1999" value="1999">1999</option>
@@ -580,17 +572,17 @@ Sus datos fueron enviados correctamente,<br>
                         <div class="col-xs-12 col-sm-4 col-label">
                             <label for="mobilePhone">Teléfono de Contacto</label>
                         </div>
-                        <div class="col-xs-4 col-sm-3 col-left">
-                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Código de área">
+                        <div class="col-xs-12 col-sm-3">
+                            <div class="" data-toggle="tooltip" data-placement="top" title="Código de área">
                                 <div class="input-group-addon" style="display:none;">0</div>
                                 <input type="tel" name="phoneCode2" id="mobilePhoneCode" value="" placeholder="Prefijo" class="form-control" maxlength="4" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="2" data-parsley-minlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-maxlength="4" data-parsley-maxlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-errors-container="#mobilePhoneCodeError" data-parsley-group="mobilePhone" data-parsley-id="30">
                             </div><!--/.input-group -->
                             <div id="mobilePhoneCodeError"></div>
                         </div><!--/.col -->
-                        <div class="col-xs-8 col-sm-5 col-right">
+                        <div class="col-xs-12 col-sm-5" >
                             <div >
                                 <div class="input-group-addon" style="display: none;">15</div>
-                                <input type="tel" name="phone2" id="mobilePhone" value="" placeholder="Teléfono celular" class="form-control" style="border-bottom-right-radius: 4px; border-top-right-radius: 4px;" maxlength="10" data-toggle="tooltip" data-placement="top" title="No incluir código de área ni 15" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-maxlength="10" data-parsley-maxlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-errors-container="#mobilePhoneError" data-parsley-group="mobilePhone" data-parsley-id="32">
+                                <input type="tel" name="phone2" id="mobilePhone" value="" placeholder="Teléfono de Contacto" class="form-control" style="border-bottom-right-radius: 4px; border-top-right-radius: 4px;" maxlength="10" data-toggle="tooltip" data-placement="top" title="No incluir código de área ni 15" data-parsley-trigger="change" data-parsley-required="true" data-parsley-required-message="Este campo es requerido." data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-maxlength="10" data-parsley-maxlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-errors-container="#mobilePhoneError" data-parsley-group="mobilePhone" data-parsley-id="32">
                             </div><!--/.input-group -->
                             <div id="mobilePhoneError"></div>
                         </div>
@@ -604,8 +596,8 @@ Sus datos fueron enviados correctamente,<br>
                         <div class="col-xs-12 col-sm-4 col-label">
                             <label for="phone">Teléfono Alternativo (opcional)</label>
                         </div>
-                        <div class="col-xs-4 col-sm-3 col-left">
-                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Código de área">
+                        <div class="col-xs-12 col-sm-3">
+                            <div class="" data-toggle="tooltip" data-placement="top" title="Código de área">
                                 <div class="input-group-addon" style="display:none;">0</div>
                                 <input type="tel" name="phoneCode" id="phonecode" value="" placeholder="Prefijo" class="form-control" maxlength="4" data-parsley-trigger="change" data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="2" data-parsley-minlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-maxlength="4" data-parsley-maxlength-message="El prefijo debe contener entre 2 y 4 dígitos." data-parsley-errors-container="#phoneCodeError" data-parsley-group="phone" data-parsley-id="34"
 
@@ -616,8 +608,8 @@ Sus datos fueron enviados correctamente,<br>
                             </div><!--/.input-group -->
                             <div id="phoneCodeError"></div>
                         </div><!--/.col -->
-                        <div class="col-xs-8 col-sm-5 col-right">
-                            <input type="tel" name="phone" id="phone" value="" placeholder="Teléfono fijo" class="form-control" maxlength="10" data-toggle="tooltip" data-placement="top" title="No incluir código de área" data-parsley-trigger="change" data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-maxlength="10" data-parsley-maxlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-errors-container="#phoneError" data-parsley-group="phone" data-parsley-id="36">
+                        <div class="col-xs-12 col-sm-5">
+                            <input type="tel" name="phone" id="phone" value="" placeholder="Teléfono Alternativo" class="form-control" maxlength="10" data-toggle="tooltip" data-placement="top" title="No incluir código de área" data-parsley-trigger="change" data-parsley-type="integer" data-parsley-type-message="Por favor, introducir sólo números." data-parsley-minlength="6" data-parsley-minlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-maxlength="10" data-parsley-maxlength-message="El número debe contener entre 6 y 10 dígitos." data-parsley-errors-container="#phoneError" data-parsley-group="phone" data-parsley-id="36">
                             <div id="phoneError"></div>
                         </div>
                     </div><!--/.form-group -->
@@ -858,34 +850,11 @@ selector3();
 
 <p style="text-transform: lowercase;">
 
-1)       VÁLIDO PARA COMPRAS  ABONADAS CON TARJETAS DE CRÉDITO MASTERCARD WALMART (LA “TARJETA DE CRÉDITO”) EMITIDAS POR  CORDIAL COMPAÑÍA FINANCIERA S.A. EJ.: (I) SI COMPRA UN PRODUCTO POR $2.400, EN 12  CUOTAS SE LE REINTEGRARÁ EL 15% DEL PRECIO, ES DECIR $360.  DESDE EL 1ER. Y HASTA EL 12AVO RESUMEN QUE SE EMITA CON POSTERIORIDAD AL CIERRE Y LUEGO DE REALIZADA LA COMPRA,  SE VERÁ REFLEJADO UN CONSUMO DE $200 EN CADA UNO DE ELLOS. EL REINTEGRO DE $360 SE REFLEJARÁ EN EL 1ER.  O 2DO. RESUMEN. (II) P/LA COMPRA DE UN PRODUCTO CUYO PRECIO FUERA $1.200 SE REALIZARÁ UN DESCUENTO VÍA REINTEGRO DEL 15% SOBRE EL PRECIO. EN EL 1ER. RESUMEN QUE SE EMITA CON POSTERIORIDAD AL CIERRE Y LUEGO DE REALIZADA LA COMPRA SE VERÁ REFLEJADO UN CONSUMO DE $1.200 Y EL REINTEGRO DE $180 SE VERÁ REFLEJADO EN EL 1ER. O 2DO. RESUMEN.
-<br>
-2)      EL REINTEGRO SE VERÁ REFLEJADO EN EL 1ER. O 2DO RESUMEN TRAS LA COMPRA Y LUEGO DEL CIERRE. <br>
-3)      PARA COMPRAS REALIZADAS EN UN PAGO. SE EXCLUYEN PRODUCTOS DE ELECTRO. VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO POR TRANSACCIÓN Y POR CUENTA $300. <br>
-4)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. 4 CUOTAS SIN INTERÉS, 6  CUOTAS SIN INTERÉS: TASA NOMINAL ANUAL (TNA) 0%, TASA EFECTIVA ANUAL (TEA) 0%. COSTO FINANCIERO TOTAL NOMINAL ANUAL (CFTNA): (0.00%).EL CFTNA Y DEMÁS DATOS ECONÓMICOS INFORMADOS EN EL PRESENTE CORRESPONDEN EXCLUSIVAMENTE A LA OPERACIÓN DE COMPRA EN CUOTAS OBJETO DE LA PRESENTE.<br>
-5)      PARA COMPRAS REALIZADAS EN LOCALES WALMART Y CHANGOMÁS UBICADOS EN LA REPÚBLICA ARGENTINA.<br>
-6)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. EN LA COMPRA DE  DOS ENTRADAS PARA CINES, SE BONIFICARÁ EL PRECIO DE UNA DE ELLAS, CON UN TOPE POR CUENTA Y POR MES $120.<br>
-7)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO $ 100 POR CUENTA Y POR MES. <br>
-8)      VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO POR CUENTA Y POR TRANSACCIÓN $500. TOPE DE TRANSACCIONES POR MES 2 (DOS).<br>
-9)      LA APLICACIÓN TARJETAPP (LA “APLICACIÓN”)  ES  ADMINISTRADA CORDIAL COMPAÑÍA FINANCIERA S.A.  LA APLICACIÓN ESTARÁ DISPONIBLE PARA CLIENTES TITULARES DE TARJETAS DE CRÉDITO MASTERCARD WALMART Y/O DE TARJETAS DE CRÉDITO WALMART EMITIDAS POR CORDIAL.  DISPONIBLE PARA SMARTPHONES Y/O TABLETS CON LOS SISTEMAS OPERATIVOS ANDROID. LA APLICACIÓN SE PODRÁ BAJAR DE GOOGLE PLAY. LA APLICACIÓN NO REEMPLAZA LA EMISIÓN DEL RESUMEN MENSUAL EN LOS TÉRMINOS DEL ART. 23 DE LA LEY DE TARJETAS DE CRÉDITO. EL ACCESO A LA APLICACIÓN ESTÁ SUJETA A LOS TÉRMINOS Y CONDICIONES Y POLÍTICAS QUE REGULAN EL USO Y FUNCIONAMIENTO DE LA MISMA.<br>
-10)   AL SOLICITAR LA ADHESIÓN AL RESUMEN DIGITAL DE TARJETAS DE CRÉDITO MASTERCARD WALMART EMITIDAS POR CORDIAL, EL CLIENTE SOLICITA MODIFICAR EL SISTEMA DE ENVÍO POR CORREO POSTAL AL SISTEMA REMISIÓN POR CORREO ELECTRÓNICO, DEJANDO SIN EFECTO EL ENVÍO POR CORREO POSTAL. EL RESUMEN DIGITAL, ESTARÁ A DISPOSICIÓN DEL CLIENTE CON LA PERIODICIDAD ESTABLECIDA POR LAS NORMAS.<br>
-// CORDIAL COMPAÑÍA FINANCIERA S.A. RECONQUISTA 320, PISO 1RO., C.A.B.A., C.U.I.T. Nº 30-70181085-2. – INSCRIP. I.G.J. N° 1323, L. 4, SOCIEDADES POR ACCIONES. PROMOCIONES NO ACUMULABLES NI COMBINABLES CON OTRAS VIGENTES.  
- 
- </p>
+1)VÁLIDO PARA COMPRAS ABONADAS CON TARJETAS DE CRÉDITO MASTERCARD WALMART (LA “TARJETA DE CRÉDITO”) EMITIDAS POR CORDIAL COMPAÑÍA FINANCIERA S.A. EJ.: (I) SI COMPRA UN PRODUCTO POR $2.400, EN 12 CUOTAS SE LE REINTEGRARÁ EL 15% DEL PRECIO, ES DECIR $360. DESDE EL 1ER. Y HASTA EL 12AVO RESUMEN QUE SE EMITA CON POSTERIORIDAD AL CIERRE Y LUEGO DE REALIZADA LA COMPRA, SE VERÁ REFLEJADO UN CONSUMO DE $200 EN CADA UNO DE ELLOS. EL REINTEGRO DE $360 SE REFLEJARÁ EN EL 1ER. O 2DO. RESUMEN. (II) P/LA COMPRA DE UN PRODUCTO CUYO PRECIO FUERA $1.200 SE REALIZARÁ UN DESCUENTO VÍA REINTEGRO DEL 15% SOBRE EL PRECIO. EN EL 1ER. RESUMEN QUE SE EMITA CON POSTERIORIDAD AL CIERRE Y LUEGO DE REALIZADA LA COMPRA SE VERÁ REFLEJADO UN CONSUMO DE $1.200 Y EL REINTEGRO DE $180 SE VERÁ REFLEJADO EN EL 1ER. O 2DO. RESUMEN. 2) EL REINTEGRO SE VERÁ REFLEJADO EN EL 1ER. O 2DO RESUMEN TRAS LA COMPRA Y LUEGO DEL CIERRE. 3) PARA COMPRAS REALIZADAS EN UN PAGO. SE EXCLUYEN PRODUCTOS DE ELECTRO. VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO POR TRANSACCIÓN Y POR CUENTA $300. 4) VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. 4 CUOTAS SIN INTERÉS: TASA NOMINAL ANUAL (TNA) 0%, TASA EFECTIVA ANUAL (TEA) 0%. COSTO FINANCIERO TOTAL NOMINAL ANUAL (CFTNA): (0.00%).EL CFTNA Y DEMÁS DATOS ECONÓMICOS INFORMADOS EN EL PRESENTE CORRESPONDEN EXCLUSIVAMENTE A LA OPERACIÓN DE COMPRA EN CUOTAS OBJETO DE LA PRESENTE. 5) PARA COMPRAS REALIZADAS EN LOCALES WALMART Y CHANGOMÁS UBICADOS EN LA REPÚBLICA ARGENTINA. 6) VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. EN LA COMPRA DE DOS ENTRADAS PARA CINES, SE BONIFICARÁ EL PRECIO DE UNA DE ELLAS, CON UN TOPE POR CUENTA Y POR MES $120. 7) VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO $ 100 POR CUENTA Y POR MES. 8) VIGENTE ENTRE EL 01/12/2016 Y EL 31/12/2016. TOPE DE REINTEGRO POR CUENTA Y POR TRANSACCIÓN $500. TOPE DE TRANSACCIONES POR MES 2 (DOS). 9) LA APLICACIÓN TARJETAPP (LA “APLICACIÓN”) ES ADMINISTRADA CORDIAL COMPAÑÍA FINANCIERA S.A. LA APLICACIÓN ESTARÁ DISPONIBLE PARA CLIENTES TITULARES DE TARJETAS DE CRÉDITO MASTERCARD WALMART Y/O DE TARJETAS DE CRÉDITO WALMART EMITIDAS POR CORDIAL. DISPONIBLE PARA SMARTPHONES Y/O TABLETS CON LOS SISTEMAS OPERATIVOS ANDROID. LA APLICACIÓN SE PODRÁ BAJAR DE GOOGLE PLAY. LA APLICACIÓN NO REEMPLAZA LA EMISIÓN DEL RESUMEN MENSUAL EN LOS TÉRMINOS DEL ART. 23 DE LA LEY DE TARJETAS DE CRÉDITO. EL ACCESO A LA APLICACIÓN ESTÁ SUJETA A LOS TÉRMINOS Y CONDICIONES Y POLÍTICAS QUE REGULAN EL USO Y FUNCIONAMIENTO DE LA MISMA. 10) AL SOLICITAR LA ADHESIÓN AL RESUMEN DIGITAL DE TARJETAS DE CRÉDITO MASTERCARD WALMART EMITIDAS POR CORDIAL, EL CLIENTE SOLICITA MODIFICAR EL SISTEMA DE ENVÍO POR CORREO POSTAL AL SISTEMA REMISIÓN POR CORREO ELECTRÓNICO, DEJANDO SIN EFECTO EL ENVÍO POR CORREO POSTAL. EL RESUMEN DIGITAL, ESTARÁ A DISPOSICIÓN DEL CLIENTE CON LA PERIODICIDAD ESTABLECIDA POR LAS NORMAS. 11) VÁLIDA ENTRE EL 14/11/2016 Y EL 31/12/2016 . EL REINTEGRO SE APLICARÁ SOBRE LA PRIMERA COMPRA REALIZADA EN CUALQUIER COMERCIO ADHERIDO AL SISTEMA FIRST DATA CONO SUR S.R.L., DENTRO DE LOS PRIMEROS 45 DÍAS POSTERIORES A LA FECHA DE ALTA DE LA TARJETA Y SE VERÁ REFLEJADO EN EL RESUMEN DE CUENTA EN EL QUE INGRESE LA TRANSACCIÓN. TOPE DE REINTEGRO $200 POR CUENTA. NO INCLUYE ELECTRO.// CORDIAL COMPAÑÍA FINANCIERA S.A. RECONQUISTA 320, PISO 1RO., C.A.B.A., C.U.I.T. Nº 30-70181085-2. – INSCRIP. I.G.J. N° 1323, L. 4, SOCIEDADES POR ACCIONES. PROMOCIONES NO ACUMULABLES NI COMBINABLES CON OTRAS VIGENTES.
+TARJETA MASTERCARD® WALMART: COMISIÓN ANUAL DE POR RENOVACIÓN DE LA TARJETA: $404.49. COMISIÓN POR MANTENIMIENTO DE CUENTA: $61.50. CARGO POR REPOSICIÓN DE TARJETA: $38.84. TARJETA DE CRÉDITO MASTERCARD WALMART LA “TARJETA" EMITIDA POR CORDIAL COMPAÑÍA FINANCIERA S.A. RECONQUISTA 320, PISO 1RO., C.A.B.A., C.U.I.T. Nº 30 70181085 2. INSCRIP. I.G.J. N° 1323, L. 4, SOCIEDADES POR ACCIONES. EL OTORGAMIENTO DE LA TARJETA SE ENCUENTRA SUJETO A LAS CONDICIONES DE CONTRATACIÓN Y ANÁLISIS CREDITICIO DE CORDIAL COMPAÑÍA FINANCIERA S.A. 
 
 
-<br>
-
-
- <p>
-
-               
-                    
-Tarjeta MasterCard® Walmart: Comisión anual de por renovación de la tarjeta: $404.49. Comisión por mantenimiento de cuenta: $61.50. Cargo por reposición de tarjeta: $38.84.
-Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compañía Financiera S.A. Reconquista 320, Piso 1ro., C.A.B.A., C.U.I.T. Nº 30 70181085 2.   Inscrip. I.G.J. N° 1323, L. 4, Sociedades por Acciones. El otorgamiento de la tarjeta se encuentra sujeto a las condiciones de contratación y análisis crediticio de Cordial Compañía Financiera S.A.
-
-                <br>
-                *Disponible cartera consumo. Tarjeta de crédito mastercard walmart (la &rdquo;tarjeta&quot;) emitida por cordial compañía financiera s.a.. Reconquista 320, piso 1ro., c.a.b.a., c.u.i.t. nº 30-70181085-2. – inscrip. I.g.j. n° 1323, l. 4, sociedades por acciones. Válida entre el 14/11/2016 y el 31/12/2016 . El reintegro se aplicará sobre la primera compra realizada en cualquier comercio adherido al sistema first data cono sur s.r.l., dentro de los primeros 45 días posteriores a la fecha de alta de la tarjeta y se verá reflejado en el resumen de cuenta en el que ingrese la transacción. Tope de reintegro $200 por cuenta. No incluye electro. </p>
+</p>
                 <p>&nbsp; </p>
         
             </div><!--/#legal -->
@@ -901,17 +870,25 @@ Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compa�
 
 
 <script> var api_settings = {landing:109, hash:"81f36140b3f803d1314f70b647e5e8039811b63384e65165eacf2f193ed13e11", apiKey:"560bef83-7c30-4dfd-a659-110fa2f2edbe", timestamp:"1478626701"};</script>
+
+
 <script src="./archivos/jquery.min.js"></script>
 <script src="./archivos/bootstrap.min.js"></script>
+
+
 <script src="./archivos/jquery.base64.min.js"></script>
-<script src="./archivos/cookie.js"></script>
+
+<script src="./archivos/cookie.js"></script> <!--
 <script src="./archivos/plugins.js"></script>
-
+-->
 <script src="./archivos/parsley.min.js"></script>
-<script src="./archivos/form.js"></script>
-<script src="./archivos/json3.min.js"></script>
-<script src="./archivos/leads-api-1.0.js"></script>
 
+<script src="./archivos/form.js"></script>
+
+<script src="./archivos/json3.min.js"></script>
+
+<script src="./archivos/leads-api-1.0.js"></script>
+<!---->
 <script src="./archivos/jquery.dateSelectBoxes.js"></script>
 
 
@@ -927,8 +904,7 @@ Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compa�
         });
         ///////////////////////////////
 
-
-
+/*
         if ($("#prov").val() == '') {
             $("#sucursal").parent().parent().addClass("hide");
         } else {
@@ -1050,11 +1026,15 @@ Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compa�
         }
 
 
-                $('#acceptterms').attr('checked', 'checked');
+                
+*/
+             
             }); // End - Document Ready
+
+$('#acceptterms').attr('checked', 'checked');
 </script>
 
-
+<!--
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6bc1c39adc","applicationID":"14461293","transactionName":"ZwdXZEFXWEJWWkQPDV5NYEJaGUVeW1BTDxZREBhAQVNFRVZUX0gSWBI=","queueTime":0,"applicationTime":2,"atts":"S0BUEglNS0w=","errorBeacon":"bam.nr-data.net","agent":""}</script>
 
 
@@ -1064,7 +1044,7 @@ Tarjeta de crédito MasterCard Walmart la “tarjeta" emitida por Cordial Compa�
 <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1057077157683776");fbq("track","PageView");</script>
 <noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1057077157683776&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
 <iframe src="./archivos/pixel.html" style="display: none;"></iframe>
-
+-->
 
 
 <script>

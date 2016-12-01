@@ -419,4 +419,19 @@ padding-left: 15px;
 
 
 
+.correcion {
+    padding-right: 0;
+}
+
+
+@media (max-width: 543px) {
+    .correcion {
+        padding-right: 0;
+        background-color: blue;
+    }
+}
+
+
+
+
 

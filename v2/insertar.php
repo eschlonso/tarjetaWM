@@ -98,8 +98,8 @@ $sql = "INSERT INTO formulario1 (tipo_dni,dni,nombre,apellido,fecha_nacimiento,s
 VALUES ('".$tipo_dni."','".$dni."','".$nombre."','".$apellido."','".$fecha_nacimiento."','".$sexo."','".$situacion_laboral."','".$antlaboral."','".$ingreso_mensual."','".$perfil_crediticio."','".$email."','".$celular."','".$telefono_fijo."','".$provincia."','".$recibir_promo_ofertas."','".$sucursal."')";
 */
 
-$sql = "INSERT INTO formulario1 (tipo_dni,dni,nombre,apellido,fecha_nacimiento,sexo,situacion_laboral,antlaboral,ingreso_mensuales,perfil_crediticio,email,telalternativo,telefono_fijo,provincia,recibir_promo_ofertas,sucursal,fecha_alta,producto,subproducto,empresa,promocion,canal,tramiteproceid,postalcodi,clipropiedadtipoid,monto,cliivaid)
-VALUES ('".$tipo_dni."','".$dni."','".$nombre."','".$apellido."','".$fecha_nacimiento."','".$sexo."','".$situacion_laboral."','".$antlaboral."','".$ingreso_mensual."','".$perfil_crediticio."','".$email."','".$celular."','".$telefono_fijo."','".$provincia."','".$recibir_promo_ofertas."','".$sucursal."','".$hoy."','110','89','81','1','1','1','".$codigoPostal."','1','7000','4')";
+$sql = "INSERT INTO formulario1 (tipo_dni,dni,nombre,apellido,fecha_nacimiento,sexo,ingreso_mensuales,email,telalternativo,telefono_fijo,recibir_promo_ofertas,sucursal,fecha_alta,producto,subproducto,empresa,promocion,canal,tramiteproceid,postalcodi,clipropiedadtipoid,monto,cliivaid)
+VALUES ('".$tipo_dni."','".$dni."','".$nombre."','".$apellido."','".$fecha_nacimiento."','".$sexo."','".$ingreso_mensual."','".$email."','".$celular."','".$telefono_fijo."','".$recibir_promo_ofertas."','".$sucursal."','".$hoy."','110','89','81','1','1','1','".$codigoPostal."','1','7000','4')";
 
 
 
@@ -123,5 +123,3 @@ mysqli_close($conn);
 
 
 ?> 
-
-

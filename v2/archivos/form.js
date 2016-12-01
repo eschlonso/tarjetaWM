@@ -117,7 +117,7 @@ console.log(result);
         {
             //alert('result'+result);
             //$('#exito').show();
-
+            $('#exito').html("<p>Sus datos fueron enviados correctamente,<br> nos comunicaremos con ustedes a la brevedad.<br> <a href='' name='result'>Volver</a> </p>");
              $("#exito").show();
 
 

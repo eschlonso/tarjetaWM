@@ -59,10 +59,10 @@
                             return false;
                         });
                     }
-                     
+                     /*
                     setInterval(function() {
                       window.location.reload();
-                    }, 300000); 
+                    }, 300000);*/ 
                 },
                 submitForm: function () {
                     var headers = {'X-Api-Hash': this.settings.hash,
